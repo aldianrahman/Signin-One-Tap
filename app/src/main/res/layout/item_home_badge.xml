@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <ImageButton
+        android:id="@+id/iconBtn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:scaleType="fitCenter" />
+
+    <ImageView
+        android:id="@+id/notifBadgeNavBot"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="-30dp"
+        android:layout_toStartOf="@+id/iconBtn"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="-30dp"
+        android:layout_toLeftOf="@+id/iconBtn" />
+
+    <TextView
+        android:id="@+id/tvItemHomeButtonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="8dp"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+</RelativeLayout>
+

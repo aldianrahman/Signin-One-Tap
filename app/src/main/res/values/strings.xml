@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Signin-One-Tap</string>
+    <string name="your_web_client_id">935023278084-rui2t32aoev15vi66okbu284flcv5dt9.apps.googleusercontent.com</string>
+    <!--    <string name="your_web_client_id">935023278084-23o5vmmkg4rg0n0n7crtf4avo6eo8792.apps.googleusercontent.com</string>-->
+    <!--    <string name="your_web_client_id">764943197871-ab7od6sslkrrem6sp6u3uuuif9d31rmi.apps.googleusercontent.com</string>-->
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
