@@ -25,15 +25,22 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 public class MainActivity extends AppCompatActivity {
 
     private SignInClient oneTapClient;
     private BeginSignInRequest signUpRequest;
 
+    private View loginBottomSheetLayout;
+
+    private BottomSheetBehavior bottomSheet;
+
     SignInButton button;
 
-    Button toAcc;
+    Button showButton;
+
+    private int behaviourState = BottomSheetBehavior.STATE_HIDDEN;
 
     String TAG = "MAIN_ACT_DEBUG";
 
@@ -100,6 +107,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+        showButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bottomSheet.setState(BottomSheetBehavior.STATE_HALF_EXPANDED);
+                behaviourState = BottomSheetBehavior.STATE_HALF_EXPANDED;
+            }
+        });
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,16 +139,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        toAcc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
     }
 
     private void initUi() {
-        button = findViewById(R.id.sign_in_button);
-        toAcc = findViewById(R.id.toAcc);
+        showButton = findViewById(R.id.toAcc);
+        loginBottomSheetLayout = findViewById(R.id.loginBottomSheetLayout);
+        button = loginBottomSheetLayout.findViewById(R.id.sign_in_button);
+        bottomSheet = BottomSheetBehavior.from(loginBottomSheetLayout);
+        bottomSheet.setState(behaviourState);
     }
 }
